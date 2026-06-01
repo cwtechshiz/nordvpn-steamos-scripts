@@ -41,10 +41,10 @@ git clone [https://github.com/cwtechshiz/nordvpn-steamos-scripts.git](https://gi
 cd nordvpn-steamos-scripts
 
 # Make the installer script executable
-chmod +x install_nord.sh
+chmod +x install_nordvpn_steamos.sh
 
 # Run the installer
-./install_nord.sh
+./install_nordvpn_steamos.sh
 ```
 
 ### Step 3: Enter Your Password
@@ -75,7 +75,7 @@ See ```man nordvpn``` or ```nordvpn --help``` if you need help running it from c
 
 Now that the system configurations are complete, you can safely return to **Gaming Mode**!
 
-To avoid ever using Desktop Mode or a terminal again, install the companion **[NordVPN Decky Plugin](https://github.com/cwtechshiz/nordvpn-decky)**. It adds a beautiful status card inside your `···` overlay where you can select a country, connect/disconnect, and toggle **Meshnet** with a tap.
+To avoid ever using Desktop Mode or a terminal to use it, install the companion **[NordVPN Decky Plugin](https://github.com/cwtechshiz/nordvpn-decky)**. It adds a beautiful status card inside your `···` overlay where you can select a country, connect/disconnect, and toggle **Meshnet** with a tap.
 
 ---
 
@@ -86,7 +86,7 @@ To avoid ever using Desktop Mode or a terminal again, install the companion **[N
 **Don't panic!** You do not need to repeat the entire setup or look up complex terminal commands again. If NordVPN stops working after a SteamOS update, just do this to quickly reinstall it:
 1. Open the **Konsole** app in Desktop Mode.
 2. Type `cd nordvpn-steamos-scripts` and press **Enter**.
-3. Type `./install_nord.sh` and press **Enter**.
+3. Type `./install_nordvpn_steamos.sh` and press **Enter**.
 
 This script was designed specifically to make re-adding NordVPN a simple, one-step process for you and your friends!
 
@@ -104,8 +104,8 @@ If you ever want to completely remove NordVPN and clean up all system files, the
    ```
 3. Run the uninstaller script:
 ```bash
-   chmod +x uninstall_nord.sh
-   ./uninstall_nord.sh
+   chmod +x uninstall_nordvpn_steamos.sh
+   ./uninstall_nordvpn_steamos.sh
    ```
 4. The script safely stops active daemons, deletes the application packages, wipes custom user groups, and leaves your SteamOS locked down exactly as it found it.
 
