@@ -75,7 +75,7 @@ See ```man nordvpn``` or ```nordvpn --help``` if you need help running it from c
 
 Now that the system configurations are complete, you can safely return to **Gaming Mode**!
 
-To avoid ever using Desktop Mode or a terminal again, install the companion **[NordVPN Decky Plugin](https://github.com/YOUR_USERNAME/nordvpn-decky)**. It adds a beautiful status card inside your `···` overlay where you can select a country, connect/disconnect, and toggle **Meshnet** with a tap.
+To avoid ever using Desktop Mode or a terminal again, install the companion **[NordVPN Decky Plugin](https://github.com/cwtechshiz/nordvpn-decky)**. It adds a beautiful status card inside your `···` overlay where you can select a country, connect/disconnect, and toggle **Meshnet** with a tap.
 
 ---
 
