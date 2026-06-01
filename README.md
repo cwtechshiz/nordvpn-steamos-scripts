@@ -1,37 +1,37 @@
 # SteamOS NordVPN Helper Scripts
 
-> An automated, beginner-friendly way to install, update, and manage the official NordVPN Linux client on SteamOS (Steam Deck) without breaking your read-only system[cite: 10].
+> An automated, beginner-friendly way to install, update, and manage the official NordVPN Linux client on SteamOS (Steam Deck) without breaking your read-only system.
 
 ---
 
 ## 🚀 Features
 
-* **Automated File Unlocking:** Temporarily disables the SteamOS read-only lock to safely install/remove packages and re-locks it immediately when finished[cite: 10].
-* **Keyring Configuration:** Automatically sets up your system security keys (`pacman-key`) to avoid signature or package errors during installation[cite: 10].
-* **Desktop Mode Integration:** Configures system security contexts so the `deck` user can instantly manage NordVPN from the terminal[cite: 10].
-* **Service Automation:** Installs and configures the background daemon (`nordvpnd.service`) so it's always active and ready to connect[cite: 10].
+* **Automated File Unlocking:** Temporarily disables the SteamOS read-only lock to safely install/remove packages and re-locks it immediately when finished.
+* **Keyring Configuration:** Automatically sets up your system security keys (`pacman-key`) to avoid signature or package errors during installation.
+* **Desktop Mode Integration:** Configures system security contexts so the `deck` user can instantly manage NordVPN from the terminal.
+* **Service Automation:** Installs and configures the background daemon (`nordvpnd.service`) so it's always active and ready to connect.
 
 ---
 
 ## 🛠️ Prerequisites
 
-Before running the script, you **must set a terminal (sudo) password** on your Steam Deck if you haven't already[cite: 10]:
-1. Switch to **Desktop Mode** (Press the Steam Button → Power → Switch to Desktop)[cite: 10].
-2. Open the **Konsole** app (found in your applications menu under system utilities)[cite: 10].
-3. Type `passwd` and press **Enter**[cite: 10].
-4. Type a secure password of your choice (characters won't show up on screen as you type for security), press **Enter**, and confirm it. **Remember this password!**[cite: 10]
+Before running the script, you **must set a terminal (sudo) password** on your Steam Deck if you haven't already:
+1. Switch to **Desktop Mode** (Press the Steam Button → Power → Switch to Desktop).
+2. Open the **Konsole** app (found in your applications menu under system utilities).
+3. Type `passwd` and press **Enter**.
+4. Type a secure password of your choice (characters won't show up on screen as you type for security), press **Enter**, and confirm it. **Remember this password!**
 
 ---
 
 ## 📦 How to Install NordVPN
 
-Follow these simple steps to download and execute the installer[cite: 10]:
+Follow these simple steps to download and execute the installer:
 
 ### Step 1: Open the Terminal
-Make sure you are in **Desktop Mode** and open the **Konsole** app[cite: 10].
+Make sure you are in **Desktop Mode** and open the **Konsole** app.
 
 ### Step 2: Download and Run the Installer
-Copy and paste the following commands into Konsole and press **Enter**[cite: 10]:
+Copy and paste the following commands into Konsole and press **Enter**:
 
 ```bash
 # Clone this helper scripts repository
@@ -48,23 +48,23 @@ chmod +x install_nord.sh
 ```
 
 ### Step 3: Enter Your Password
-The script will prompt you for your terminal password (the one you created in the prerequisites). Type it in and press **Enter**[cite: 10]. 
+The script will prompt you for your terminal password (the one you created in the prerequisites). Type it in and press **Enter**. 
 
-The installation will take a minute or two to safely unpack, build, and configure the system targets. Once it finishes and displays **"SUCCESS: NordVPN is installed and ready!"**, you can proceed[cite: 10].
+The installation will take a minute or two to safely unpack, build, and configure the system targets. Once it finishes and displays **"SUCCESS: NordVPN is installed and ready!"**, you can proceed.
 
 ---
 
 ## 🔑 Logging In to Your NordVPN Account
 
-Before jumping back to Gaming Mode, you must authenticate your NordVPN account once via the terminal[cite: 10]:
+Before jumping back to Gaming Mode, you must authenticate your NordVPN account once via the terminal:
 
 1. In the same Konsole window, type:
 ```bash
    nordvpn login
    ```
-2. NordVPN will generate a secure web link. Right-click the link and select **Open Link**, or copy and paste it into your web browser[cite: 10].
-3. Log in to your account on the official NordVPN webpage[cite: 10].
-4. Your browser will prompt you to link back to the application. Once accepted, the terminal will confirm you are logged in[cite: 10].
+2. NordVPN will generate a secure web link. Right-click the link and select **Open Link**, or copy and paste it into your web browser.
+3. Log in to your account on the official NordVPN webpage.
+4. Your browser will prompt you to link back to the application. Once accepted, the terminal will confirm you are logged in.
 
 You now have nordvpn installed on steamos and it can be used as a command in terminal. 
 See ```man nordvpn``` or ```nordvpn --help``` if you need help running it from command line.
@@ -73,9 +73,9 @@ See ```man nordvpn``` or ```nordvpn --help``` if you need help running it from c
 
 ## 🎮 Managing NordVPN in Gaming Mode
 
-Now that the system configurations are complete, you can safely return to **Gaming Mode**[cite: 10]!
+Now that the system configurations are complete, you can safely return to **Gaming Mode**!
 
-To avoid ever using Desktop Mode or a terminal again, install the companion **[NordVPN Decky Plugin](https://github.com/YOUR_USERNAME/nordvpn-decky)**. It adds a beautiful status card inside your `···` overlay where you can select a country, connect/disconnect, and toggle **Meshnet** with a tap[cite: 10].
+To avoid ever using Desktop Mode or a terminal again, install the companion **[NordVPN Decky Plugin](https://github.com/YOUR_USERNAME/nordvpn-decky)**. It adds a beautiful status card inside your `···` overlay where you can select a country, connect/disconnect, and toggle **Meshnet** with a tap.
 
 ---
 
@@ -95,9 +95,9 @@ This script was designed specifically to make re-adding NordVPN a simple, one-st
 
 ## 🗑️ How to Uninstall NordVPN
 
-If you ever want to completely remove NordVPN and clean up all system files, the uninstallation process is fully automated[cite: 10]:
+If you ever want to completely remove NordVPN and clean up all system files, the uninstallation process is fully automated:
 
-1. Open **Konsole** in Desktop Mode[cite: 10].
+1. Open **Konsole** in Desktop Mode.
 2. Navigate back to this scripts folder:
 ```bash
    cd ~/nordvpn-steamos-scripts
@@ -107,5 +107,5 @@ If you ever want to completely remove NordVPN and clean up all system files, the
    chmod +x uninstall_nord.sh
    ./uninstall_nord.sh
    ```
-4. The script safely stops active daemons, deletes the application packages, wipes custom user groups, and leaves your SteamOS locked down exactly as it found it[cite: 10].
+4. The script safely stops active daemons, deletes the application packages, wipes custom user groups, and leaves your SteamOS locked down exactly as it found it.
 
