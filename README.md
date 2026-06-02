@@ -77,8 +77,6 @@ See ```man nordvpn``` or ```nordvpn --help``` if you need help running it from c
 
 ## 🎮 Managing NordVPN in Gaming Mode
 
-Now that the system configurations are complete, you can safely return to **Gaming Mode**!
-
 To avoid ever using Desktop Mode or a terminal to use it, install the companion **[NordVPN Decky Plugin](https://github.com/cwtechshiz/nordvpn-decky)**. It adds nordvpn controls inside your `···` overlay where you can select a country, connect/disconnect, and toggle **Meshnet** with a tap.
 
 ---
