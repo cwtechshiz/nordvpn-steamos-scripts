@@ -33,17 +33,21 @@ Make sure you are in **Desktop Mode** and open the **Konsole** app.
 ### Step 2: Download and Run the Installer
 Copy and paste the following commands into Konsole and press **Enter**:
 
+
+Clone this helper scripts repository
 ```bash
-# Clone this helper scripts repository
 git clone https://github.com/cwtechshiz/nordvpn-steamos-scripts.git
-
-# Enter the scripts directory
+```
+Enter the scripts directory
+```bash
 cd nordvpn-steamos-scripts
-
-# Make the installer script executable
-chmod +x install_nordvpn_steamos.sh
-
-# Run the installer
+```
+Make the scripts executable
+```bash
+chmod +x *nordvpn_steamos.sh
+```
+Run the installer
+```bash
 ./install_nordvpn_steamos.sh
 ```
 
@@ -104,7 +108,6 @@ If you ever want to completely remove NordVPN and clean up all system files, the
    ```
 3. Run the uninstaller script:
 ```bash
-   chmod +x uninstall_nordvpn_steamos.sh
    ./uninstall_nordvpn_steamos.sh
    ```
 4. The script safely stops active daemons, deletes the application packages, wipes custom user groups, and leaves your SteamOS locked down exactly as it found it.
