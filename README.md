@@ -35,7 +35,7 @@ Copy and paste the following commands into Konsole and press **Enter**:
 
 ```bash
 # Clone this helper scripts repository
-git clone [https://github.com/cwtechshiz/nordvpn-steamos-scripts.git](https://github.com/cwtechshiz/nordvpn-steamos-scripts.git)
+git clone https://github.com/cwtechshiz/nordvpn-steamos-scripts.git
 
 # Enter the scripts directory
 cd nordvpn-steamos-scripts
