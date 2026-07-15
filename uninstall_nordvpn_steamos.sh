@@ -1,4 +1,18 @@
 #!/bin/bash
+#
+# ====================================================================
+#  NordVPN Uninstaller for SteamOS (Steam Deck)
+# ====================================================================
+#
+#  Project home / latest version / issues:
+#  https://github.com/cwtechshiz/nordvpn-steamos-scripts
+#
+#  WHAT THIS DOES
+#  Removes NordVPN and its Desktop Mode group/service from your Steam
+#  Deck, and clears out the local build cache used by the installer
+#  script.
+# ====================================================================
+
 set -e
 
 # --- COLOR DEFINITIONS ---
@@ -6,6 +20,9 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
+
+# Matches the cache location used by install_nordvpn_steamos.sh
+BUILD_DIR="$HOME/.cache/nordvpn-steamdeck-build"
 
 echo -e "${RED}====================================================${NC}"
 echo -e "${RED}            Steam Deck NordVPN Uninstaller          ${NC}"
@@ -39,6 +56,15 @@ if getent group nordvpn > /dev/null; then
     echo "    Done."
 else
     echo "    Group not found. Skipping."
+fi
+
+# 6. Remove the cached AUR build directory used by the installer script
+echo -e "${YELLOW}--> Removing cached build files...${NC}"
+if [ -d "$BUILD_DIR" ]; then
+    rm -rf "$BUILD_DIR"
+    echo "    Removed $BUILD_DIR."
+else
+    echo "    No cache found. Skipping."
 fi
 
 echo -e "${GREEN}====================================================${NC}"
