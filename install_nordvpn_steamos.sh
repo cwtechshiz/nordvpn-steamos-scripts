@@ -167,7 +167,7 @@ else
 fi
 
 # 5. Compare AUR version to what's actually installed, skip rebuild if current
-source PKGBUILD
+source "$PKG_DIR/PKGBUILD"
 AUR_VERSION="${pkgver}-${pkgrel}"
 INSTALLED_VERSION=$(pacman -Q nordvpn-bin 2>/dev/null | awk '{print $2}')
 
